@@ -1,0 +1,9 @@
+{
+  "commitish" : "v2.1.5",
+  "iOS" : [
+    {
+      "hash" : "3cd17459a490f51d0659ce196d2c39d2c941a5770bbf744c3bd0fdbf749e5b48",
+      "name" : "SwiftSVG"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+github "Alamofire/Alamofire" "4.7.1"
+github "ViccAlexander/Chameleon" "2.2.0"
+github "kean/Nuke" "6.1.1"
+github "malcommac/SwiftDate" "4.5.0"
+github "mchoe/SwiftSVG" "v2.1.5"
+github "scalessec/Toast-Swift" "3.0.1"

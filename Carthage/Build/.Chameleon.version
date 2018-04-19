@@ -1,0 +1,9 @@
+{
+  "commitish" : "2.2.0",
+  "iOS" : [
+    {
+      "hash" : "5c2408f1735f2992563a751587f29230bd880c43aec1abeb76935bbbd1b5dd38",
+      "name" : "Chameleon"
+    }
+  ]
+}

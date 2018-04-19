@@ -1,0 +1,9 @@
+{
+  "commitish" : "4.5.0",
+  "iOS" : [
+    {
+      "hash" : "ebc8270c718dcbe5e6f8b159c0580816c14a46636e7043e57e9769569bdadb9c",
+      "name" : "SwiftDate"
+    }
+  ]
+}

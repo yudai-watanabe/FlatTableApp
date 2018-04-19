@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y6r-TA-Jbb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Fixtures Table View Controller-->
+        <scene sceneID="y5d-Xd-V3j">
+            <objects>
+                <viewController id="y6r-TA-Jbb" customClass="FixturesTableViewController" customModule="FlatTableApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eCB-YQ-0hC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xou-kC-J6x">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="304"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aoz-PQ-jlB">
+                                        <rect key="frame" x="87.5" y="52" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="EEE-Jh-3Vc"/>
+                                            <constraint firstAttribute="width" constant="200" id="n4o-4S-ZM6"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="aoz-PQ-jlB" firstAttribute="centerX" secondItem="xou-kC-J6x" secondAttribute="centerX" id="Qxa-jZ-dpK"/>
+                                    <constraint firstItem="aoz-PQ-jlB" firstAttribute="centerY" secondItem="xou-kC-J6x" secondAttribute="centerY" id="elo-pS-g6Z"/>
+                                    <constraint firstAttribute="width" secondItem="xou-kC-J6x" secondAttribute="height" multiplier="375:304" id="gy8-a3-3Fl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xou-kC-J6x" firstAttribute="trailing" secondItem="CP6-Be-Chl" secondAttribute="trailing" id="7Cc-Ae-PGD"/>
+                            <constraint firstItem="xou-kC-J6x" firstAttribute="leading" secondItem="CP6-Be-Chl" secondAttribute="leading" id="KrP-ck-4gl"/>
+                            <constraint firstItem="xou-kC-J6x" firstAttribute="top" secondItem="eCB-YQ-0hC" secondAttribute="top" id="p67-oH-z6A"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CP6-Be-Chl"/>
+                    </view>
+                    <connections>
+                        <outlet property="crestImage" destination="aoz-PQ-jlB" id="bIO-J0-9uu"/>
+                        <outlet property="crestView" destination="xou-kC-J6x" id="3VN-Dn-Jsd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GRf-h2-tui" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="18.440779610194905"/>
+        </scene>
+    </scenes>
+</document>
