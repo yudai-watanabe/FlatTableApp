@@ -12,16 +12,11 @@ import Alamofire
 import ToastSwiftFramework
 
 class LeagueTableViewController: UIViewController  {
-
-	@IBOutlet private weak var navigationBar: UINavigationBar!
 	
-	private let refreshControl = UIRefreshControl()
 	private let url = "http://api.football-data.org/v1/competitions/445/leagueTable"
 	private var leagueTable: LeagueTable? {
 		didSet {
-			leagueTableView = UITableView(frame: CGRect(x: 0, y: navigationBar.frame.height,
-														width: view.frame.width,
-														height: view.frame.height - navigationBar.frame.height))
+			leagueTableView = UITableView(frame: self.view.frame)
 			self.setTableView()
 		}
 	}
@@ -38,45 +33,41 @@ class LeagueTableViewController: UIViewController  {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.view.makeToastActivity(.center)
-		navigationBar.delegate = self
-		getCompetitions(complation: {
-			self.view.hideToastActivity()
-		})
-		refreshControl.addTarget(self, action: #selector(self.refresh(_:)) , for: .valueChanged)
 	}
 	
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		
-	}
-	
-	override var prefersStatusBarHidden: Bool {
-		return true
+		self.view?.removeFromSuperview()
 	}
 	
 	private func setTableView() {
 		guard let tableView = leagueTableView else{
 			return
 		}
+		
 		tableView.delegate = self
 		tableView.dataSource = self
 		tableView.register(UINib(nibName: teamRankTableViewCell.identifier, bundle: nil),
 						   forCellReuseIdentifier: teamRankTableViewCell.identifier)
+		tableView.contentInset = UIEdgeInsets.zero
+		tableView.tableHeaderView = UIView(frame: .zero)
 		tableView.tableFooterView = UIView(frame: .zero)
-		tableView.refreshControl = refreshControl
-		view.addSubview(tableView)
+		
+		self.view.addSubview(tableView)
 	}
 
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		
+		getCompetitions(complation: {
+			self.view.hideToastActivity()
+		})
 		self.navigationItem.setLeftBarButton(reloadBarButttonItem, animated: animated)
 	}
 	
 	@objc func refresh(_ sender: UIRefreshControl) {
-		getCompetitions(complation: {
-			self.refreshControl.endRefreshing()
-		})
+		getCompetitions(complation: nil)
 	}
 	
 	private func getCompetitions(complation: (()->Void)? = nil) {
@@ -102,9 +93,11 @@ extension LeagueTableViewController: UITableViewDelegate {
 		tableView.deselectRow(at: indexPath, animated: true)
 		let fixturesTableVC = FixturesTableViewController.instantiateFromStoryboard() as! FixturesTableViewController
 		fixturesTableVC.standing = self.leagueTable?.standing[indexPath.row]
-		self.present(fixturesTableVC, animated: true, completion: {
-			print("presented")
-		})
+		self.navigationController?.pushViewController(fixturesTableVC, animated: true)
+	}
+	
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		return 44
 	}
 	
 }
@@ -123,16 +116,6 @@ extension LeagueTableViewController: UITableViewDataSource {
 		let standing = self.leagueTable?.standing[indexPath.row]
 		cell.standing = standing
 		return cell
-	}
-	
-}
-
-//MARK:- UINavigationBarDelegate
-
-extension LeagueTableViewController: UINavigationBarDelegate {
-	
-	func position(for bar: UIBarPositioning) -> UIBarPosition {
-		return .topAttached
 	}
 	
 }

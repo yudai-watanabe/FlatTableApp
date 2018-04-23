@@ -32,6 +32,7 @@ class FixturesTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		getCompetitions()
+		
         // Do any additional setup after loading the view.
     }
 

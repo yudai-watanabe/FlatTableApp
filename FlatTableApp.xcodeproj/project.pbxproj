@@ -15,6 +15,9 @@
 		3735601820849CFB000DB067 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3735601720849CFB000DB067 /* Links.swift */; };
 		3735601A20849E28000DB067 /* Competitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3735601920849E28000DB067 /* Competitions.swift */; };
 		3735601E208593FE000DB067 /* LeagueTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3735601D208593FE000DB067 /* LeagueTableViewController.storyboard */; };
+		377E8ECE208DA369008FD662 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E8ECD208DA369008FD662 /* TabBarController.swift */; };
+		377E8ED2208DB407008FD662 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E8ED1208DB407008FD662 /* NewsViewController.swift */; };
+		377E8ED4208DB43A008FD662 /* NewsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377E8ED3208DB43A008FD662 /* NewsViewController.storyboard */; };
 		37AFC2E72087107F005FB03E /* SwiftSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37AFC2E62087107F005FB03E /* SwiftSVG.framework */; };
 		37AFC2EB20874ADB005FB03E /* FixturesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AFC2EA20874ADB005FB03E /* FixturesTableViewController.swift */; };
 		37AFC2ED20874AFB005FB03E /* FixturesTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37AFC2EC20874AFB005FB03E /* FixturesTableViewController.storyboard */; };
@@ -57,6 +60,9 @@
 		3735601720849CFB000DB067 /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 		3735601920849E28000DB067 /* Competitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Competitions.swift; sourceTree = "<group>"; };
 		3735601D208593FE000DB067 /* LeagueTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LeagueTableViewController.storyboard; sourceTree = "<group>"; };
+		377E8ECD208DA369008FD662 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		377E8ED1208DB407008FD662 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		377E8ED3208DB43A008FD662 /* NewsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsViewController.storyboard; sourceTree = "<group>"; };
 		37AFC2E62087107F005FB03E /* SwiftSVG.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSVG.framework; path = Carthage/Build/iOS/SwiftSVG.framework; sourceTree = "<group>"; };
 		37AFC2EA20874ADB005FB03E /* FixturesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesTableViewController.swift; sourceTree = "<group>"; };
 		37AFC2EC20874AFB005FB03E /* FixturesTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FixturesTableViewController.storyboard; sourceTree = "<group>"; };
@@ -132,6 +138,15 @@
 				3735600D20848E0D000DB067 /* Alamofire.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		377E8ED0208DAD64008FD662 /* NewsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				377E8ED1208DB407008FD662 /* NewsViewController.swift */,
+				377E8ED3208DB43A008FD662 /* NewsViewController.storyboard */,
+			);
+			path = NewsViewController;
 			sourceTree = "<group>";
 		};
 		37AFC2E820874A70005FB03E /* LeagueTableViewController */ = {
@@ -217,8 +232,10 @@
 		37DAE46A207F60D300DE5399 /* ViewCintroller */ = {
 			isa = PBXGroup;
 			children = (
+				377E8ED0208DAD64008FD662 /* NewsViewController */,
 				37AFC2E920874A86005FB03E /* FixturesTableViewController */,
 				37AFC2E820874A70005FB03E /* LeagueTableViewController */,
+				377E8ECD208DA369008FD662 /* TabBarController.swift */,
 			);
 			path = ViewCintroller;
 			sourceTree = "<group>";
@@ -342,6 +359,7 @@
 			files = (
 				37DAE473207F618F00DE5399 /* TeamRankTableViewCell.xib in Resources */,
 				3735601E208593FE000DB067 /* LeagueTableViewController.storyboard in Resources */,
+				377E8ED4208DB43A008FD662 /* NewsViewController.storyboard in Resources */,
 				37DAE447207F5BAD00DE5399 /* LaunchScreen.storyboard in Resources */,
 				37AFC2ED20874AFB005FB03E /* FixturesTableViewController.storyboard in Resources */,
 				37DAE444207F5BAD00DE5399 /* Assets.xcassets in Resources */,
@@ -396,10 +414,12 @@
 				37DAE43F207F5BAD00DE5399 /* LeagueTableViewController.swift in Sources */,
 				37AFC2EB20874ADB005FB03E /* FixturesTableViewController.swift in Sources */,
 				37AFC2EF20874C6F005FB03E /* Fixtures.swift in Sources */,
+				377E8ED2208DB407008FD662 /* NewsViewController.swift in Sources */,
 				37DAE472207F618F00DE5399 /* TeamRankTableViewCell.swift in Sources */,
 				37AFC2F220882897005FB03E /* UIViewController + .swift in Sources */,
 				37DAE43D207F5BAD00DE5399 /* AppDelegate.swift in Sources */,
 				3735601620849C36000DB067 /* LeagueTable.swift in Sources */,
+				377E8ECE208DA369008FD662 /* TabBarController.swift in Sources */,
 				3735601A20849E28000DB067 /* Competitions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -569,7 +589,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = test.FlatTableApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -588,7 +608,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = test.FlatTableApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -14,32 +14,12 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LeagueTableViewController" customModule="FlatTableApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="4ze-lI-DTx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wf1-hF-V6s">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <color key="backgroundColor" red="0.15686274509803921" green="0.70196078431372544" blue="0.56862745098039214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="PREMIER LEAGUE" id="Uea-fC-xok"/>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Wf1-hF-V6s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6PC-iC-kAJ"/>
-                            <constraint firstItem="Wf1-hF-V6s" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8v4-4b-GEv"/>
-                            <constraint firstItem="Wf1-hF-V6s" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Bba-8y-vS7"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Wqp-PG-0Lh"/>
                     </view>
-                    <connections>
-                        <outlet property="navigationBar" destination="Wf1-hF-V6s" id="emr-Qx-vaY"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
