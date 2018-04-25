@@ -8,37 +8,38 @@
 
 import Foundation
 
-struct Fixtures: Codable  {
+struct FixturesEntity: Entity {
 	let _links: Links
 	let season: String
 	let count: Int
 	let fixtures: Array<Fixture>
 }
 
-struct Fixture: Codable {
+struct Fixture: Entity {
 	
-	enum FixtureStatus: String, Codable {
-		case FINISHED
-		case TIMED
+	enum FixtureStatus: String, CodingKey, Codable {
 		case SCHEDULED
+		case TIMED
+		case FINISHED
 	}
 	
-	let _links: Links
-	let date: String
-	let status: FixtureStatus
-	let matchDay: Int
-	let homeTeamName: String
-	let awayTeamName: String
-	let odds: String?
+	let _links: Links?
+	let date: String?
+	let status: FixtureStatus?
+	let matchday: Int?
+	let homeTeamName: String?
+	let awayTeamName: String?
+	var odds: Any?
+	let result: FixtureResult?
 }
 
-struct FixtureResult: Codable {
+struct FixtureResult: Entity {
 	let goalsHomeTeam: Int?
 	let goalsAwayTeam: Int?
-	let halfTime: HalfTimeResult
+	let halfTime: HalfTimeResult?
 }
 
-struct HalfTimeResult: Codable {
+struct HalfTimeResult: Entity {
 	let goalsHomeTeam: Int?
 	let goalsAwayTeam: Int?
 }

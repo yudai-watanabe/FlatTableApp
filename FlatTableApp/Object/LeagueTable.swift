@@ -8,14 +8,16 @@
 
 import Foundation
 
-struct LeagueTable: Codable {
+protocol Entity: Codable {}
+
+struct LeagueTableEntity: Entity {
 	let _links: Links
 	let leagueCaption: String
 	let matchday: Int
 	let standing: Array<Standing>
 }
 
-struct Standing: Codable {
+struct Standing: Entity {
 	let _links: Links
 	let position: Int
 	let teamName: String
@@ -32,7 +34,7 @@ struct Standing: Codable {
 	let away: HomeAndAway
 }
 
-struct HomeAndAway: Codable {
+struct HomeAndAway: Entity {
 	let goals: Int
 	let goalsAgainst: Int
 	let wins: Int

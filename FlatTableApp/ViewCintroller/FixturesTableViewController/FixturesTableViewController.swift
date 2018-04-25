@@ -27,12 +27,15 @@ class FixturesTableViewController: UIViewController {
 		}
 	}
 	
+	private var fixturesEntity: FixturesEntity?
 	private let fixturesTableView: UITableView = UITableView()
-	let url: String = "http://api.football-data.org/v1/teams/65/fixtures"
-    override func viewDidLoad() {
+	
+	override func viewDidLoad() {
         super.viewDidLoad()
-		getCompetitions()
-		
+		FixturesRepository().getFixtures(complation: {entity in
+			self.fixturesEntity = entity
+			print(entity?.count ?? "nil")
+		})
         // Do any additional setup after loading the view.
     }
 
@@ -40,20 +43,5 @@ class FixturesTableViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-	
-	private func getCompetitions(complation: (()->Void)? = nil) {
-		Alamofire.request(url).responseJSON(completionHandler: {response in
-			complation?()
-			switch response.result {
-			case .success(let data):
-				print(data)
-				//				if let fixtures = try? JSONDecoder().decode(Fixtures.self, from: data) {
-				//					print(fixtures)
-			//				}
-			case .failure(let error):
-				print(error)
-			}
-		})
-	}
 
 }

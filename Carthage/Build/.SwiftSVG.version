@@ -2,7 +2,7 @@
   "commitish" : "v2.1.5",
   "iOS" : [
     {
-      "hash" : "3cd17459a490f51d0659ce196d2c39d2c941a5770bbf744c3bd0fdbf749e5b48",
+      "hash" : "7bdff464f1cf1ebb755a58e0681d2d8af8bd1a8abc575806a238894cd41803df",
       "name" : "SwiftSVG"
     }
   ]

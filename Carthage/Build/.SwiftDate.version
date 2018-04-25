@@ -2,7 +2,7 @@
   "commitish" : "4.5.0",
   "iOS" : [
     {
-      "hash" : "ebc8270c718dcbe5e6f8b159c0580816c14a46636e7043e57e9769569bdadb9c",
+      "hash" : "318537f2653216483d6e67a146b7e2618516068a6abb3690850c432895381dd5",
       "name" : "SwiftDate"
     }
   ]

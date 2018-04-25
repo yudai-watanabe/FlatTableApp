@@ -13,14 +13,14 @@ import ToastSwiftFramework
 
 class LeagueTableViewController: UIViewController  {
 	
-	private let url = "http://api.football-data.org/v1/competitions/445/leagueTable"
-	private var leagueTable: LeagueTable? {
+	private var leagueTable: LeagueTableEntity? {
 		didSet {
-			leagueTableView = UITableView(frame: self.view.frame)
+			leagueTableView = UITableView(frame: view.frame)
 			self.setTableView()
 		}
 	}
 	
+	private let repository: LeagueTableRepository = LeagueTableRepository()
 	private var leagueTableView: UITableView?
 	private let teamRankTableViewCell = TeamRankTableViewCell()
 	private lazy var reloadBarButttonItem: UIBarButtonItem = {
@@ -33,6 +33,10 @@ class LeagueTableViewController: UIViewController  {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.view.makeToastActivity(.center)
+		 repository.getLeagueTable(complation: { entity in
+			self.view.hideToastActivity()
+			self.leagueTable = entity
+		})
 	}
 	
 	override func didReceiveMemoryWarning() {
@@ -59,30 +63,16 @@ class LeagueTableViewController: UIViewController  {
 
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		
-		getCompetitions(complation: {
-			self.view.hideToastActivity()
-		})
-		self.navigationItem.setLeftBarButton(reloadBarButttonItem, animated: animated)
+		self.navigationItem.setLeftBarButton(self.reloadBarButttonItem, animated: animated)
 	}
 	
 	@objc func refresh(_ sender: UIRefreshControl) {
-		getCompetitions(complation: nil)
-	}
-	
-	private func getCompetitions(complation: (()->Void)? = nil) {
-		Alamofire.request(url).responseData(completionHandler: {response in
-			complation?()
-			switch response.result {
-			case .success(let data):
-				if let table = try? JSONDecoder().decode(LeagueTable.self, from: data) {
-					self.leagueTable = table
-				}
-			case .failure(let error):
-				print(error)
-			}
+		repository.getLeagueTable(complation:{ entity in
+			self.leagueTable = entity
 		})
 	}
+	
+	
 }
 
 // MARK:- UITableViewDelegate

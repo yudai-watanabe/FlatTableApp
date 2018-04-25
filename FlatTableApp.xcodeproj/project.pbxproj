@@ -18,6 +18,8 @@
 		377E8ECE208DA369008FD662 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E8ECD208DA369008FD662 /* TabBarController.swift */; };
 		377E8ED2208DB407008FD662 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E8ED1208DB407008FD662 /* NewsViewController.swift */; };
 		377E8ED4208DB43A008FD662 /* NewsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377E8ED3208DB43A008FD662 /* NewsViewController.storyboard */; };
+		37A0D521208F00B100005B86 /* LeagueTableRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A0D520208F00B100005B86 /* LeagueTableRepository.swift */; };
+		37A0D523208F1B2D00005B86 /* FixturesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A0D522208F1B2D00005B86 /* FixturesRepository.swift */; };
 		37AFC2E72087107F005FB03E /* SwiftSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37AFC2E62087107F005FB03E /* SwiftSVG.framework */; };
 		37AFC2EB20874ADB005FB03E /* FixturesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AFC2EA20874ADB005FB03E /* FixturesTableViewController.swift */; };
 		37AFC2ED20874AFB005FB03E /* FixturesTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37AFC2EC20874AFB005FB03E /* FixturesTableViewController.storyboard */; };
@@ -63,6 +65,8 @@
 		377E8ECD208DA369008FD662 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		377E8ED1208DB407008FD662 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		377E8ED3208DB43A008FD662 /* NewsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsViewController.storyboard; sourceTree = "<group>"; };
+		37A0D520208F00B100005B86 /* LeagueTableRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueTableRepository.swift; sourceTree = "<group>"; };
+		37A0D522208F1B2D00005B86 /* FixturesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesRepository.swift; sourceTree = "<group>"; };
 		37AFC2E62087107F005FB03E /* SwiftSVG.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSVG.framework; path = Carthage/Build/iOS/SwiftSVG.framework; sourceTree = "<group>"; };
 		37AFC2EA20874ADB005FB03E /* FixturesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesTableViewController.swift; sourceTree = "<group>"; };
 		37AFC2EC20874AFB005FB03E /* FixturesTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FixturesTableViewController.storyboard; sourceTree = "<group>"; };
@@ -149,6 +153,15 @@
 			path = NewsViewController;
 			sourceTree = "<group>";
 		};
+		37A0D51F208F008900005B86 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				37A0D520208F00B100005B86 /* LeagueTableRepository.swift */,
+				37A0D522208F1B2D00005B86 /* FixturesRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		37AFC2E820874A70005FB03E /* LeagueTableViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +212,7 @@
 		37DAE43B207F5BAD00DE5399 /* FlatTableApp */ = {
 			isa = PBXGroup;
 			children = (
+				37A0D51F208F008900005B86 /* Repository */,
 				37AFC2F020882877005FB03E /* Extension */,
 				3735600A20848883000DB067 /* Object */,
 				37DAE46B207F60DF00DE5399 /* View */,
@@ -411,8 +425,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3735601820849CFB000DB067 /* Links.swift in Sources */,
+				37A0D521208F00B100005B86 /* LeagueTableRepository.swift in Sources */,
 				37DAE43F207F5BAD00DE5399 /* LeagueTableViewController.swift in Sources */,
 				37AFC2EB20874ADB005FB03E /* FixturesTableViewController.swift in Sources */,
+				37A0D523208F1B2D00005B86 /* FixturesRepository.swift in Sources */,
 				37AFC2EF20874C6F005FB03E /* Fixtures.swift in Sources */,
 				377E8ED2208DB407008FD662 /* NewsViewController.swift in Sources */,
 				37DAE472207F618F00DE5399 /* TeamRankTableViewCell.swift in Sources */,

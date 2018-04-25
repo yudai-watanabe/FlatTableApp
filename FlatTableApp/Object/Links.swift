@@ -8,9 +8,10 @@
 
 import Foundation
 
-struct Links: Codable {
+struct Links: Entity {
 	let `self`: Href?
 	let teams: Href?
+	let team: Href?
 	let fixtures: Href?
 	let leagueTable: Href?
 	let competition: Href?
@@ -19,6 +20,6 @@ struct Links: Codable {
 	let awayTeam: Href?
 }
 
-struct Href: Codable {
+struct Href: Entity {
 	let href: String
 }

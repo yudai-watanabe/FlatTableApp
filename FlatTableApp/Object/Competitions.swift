@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Competitions: Codable {
+struct CompetitionsEntity: Entity {
 	let _links: Links
 	let id: Int
 	let caption: String
