@@ -17,7 +17,7 @@ struct FixturesEntity: Entity {
 
 struct Fixture: Entity {
 	
-	enum FixtureStatus: String, CodingKey, Codable {
+	enum FixtureStatus: String, Codable {
 		case SCHEDULED
 		case TIMED
 		case FINISHED
@@ -29,7 +29,7 @@ struct Fixture: Entity {
 	let matchday: Int?
 	let homeTeamName: String?
 	let awayTeamName: String?
-	var odds: Any?
+	var odds: String?
 	let result: FixtureResult?
 }
 

@@ -32,11 +32,13 @@ class FixturesTableViewController: UIViewController {
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
-		FixturesRepository().getFixtures(complation: {entity in
+		
+		let closure: ((FixturesEntity?) -> Void)? = {entity in
 			self.fixturesEntity = entity
-			print(entity?.count ?? "nil")
-		})
-        // Do any additional setup after loading the view.
+			print(entity ?? "nil")
+		}
+		
+		FixturesRepository().get(complation: closure)
     }
 
     override func didReceiveMemoryWarning() {

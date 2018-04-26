@@ -15,7 +15,7 @@ class TabBarController: UITabBarController {
 	static func instantiate() -> TabBarController {
 		var vcs: [UIViewController] = []
 		
-		if let vc: LeagueTableViewController = LeagueTableViewController.instantiateFromStoryboard() as? LeagueTableViewController {
+		if let vc: LeagueTableViewController = LeagueTableViewController.instantiateFromStoryboardName() {
 			vc.title = "ranking"
 			let nc: UINavigationController = UINavigationController(rootViewController: vc)
 			let barItem: UITabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.history, tag: vcs.count)
@@ -24,7 +24,7 @@ class TabBarController: UITabBarController {
 			vcs.append(nc)
 		}
 		
-		if let vc: NewsViewController = NewsViewController.instantiateFromStoryboard() as? NewsViewController {
+		if let vc: NewsViewController = NewsViewController.instantiateFromStoryboardName() {
 			vc.title = "news"
 			let nc: UINavigationController = UINavigationController(rootViewController: vc)
 			let barItem: UITabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.favorites, tag: vcs.count)

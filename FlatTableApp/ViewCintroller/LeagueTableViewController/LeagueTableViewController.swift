@@ -81,9 +81,11 @@ extension LeagueTableViewController: UITableViewDelegate {
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableView.deselectRow(at: indexPath, animated: true)
-		let fixturesTableVC = FixturesTableViewController.instantiateFromStoryboard() as! FixturesTableViewController
-		fixturesTableVC.standing = self.leagueTable?.standing[indexPath.row]
-		self.navigationController?.pushViewController(fixturesTableVC, animated: true)
+		if let fixturesTableVC: FixturesTableViewController = FixturesTableViewController.instantiateFromStoryboardName() {
+			fixturesTableVC.standing = self.leagueTable?.standing[indexPath.row]
+			self.navigationController?.pushViewController(fixturesTableVC, animated: true)
+		}
+		
 	}
 	
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
