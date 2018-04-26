@@ -22,6 +22,9 @@
 		37A0D523208F1B2D00005B86 /* FixturesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A0D522208F1B2D00005B86 /* FixturesRepository.swift */; };
 		37A0D5252091699C00005B86 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A0D5242091699C00005B86 /* BaseRepository.swift */; };
 		37A0D5272091A40700005B86 /* NSObject + Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A0D5262091A40700005B86 /* NSObject + Base.swift */; };
+		37A0D52A2091B9E200005B86 /* FixturesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A0D5282091B9E200005B86 /* FixturesTableViewCell.swift */; };
+		37A0D52B2091B9E200005B86 /* FixturesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37A0D5292091B9E200005B86 /* FixturesTableViewCell.xib */; };
+		37A0D52F2091CF5000005B86 /* UIView + Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A0D52E2091CF5000005B86 /* UIView + Base.swift */; };
 		37AFC2E72087107F005FB03E /* SwiftSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37AFC2E62087107F005FB03E /* SwiftSVG.framework */; };
 		37AFC2EB20874ADB005FB03E /* FixturesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AFC2EA20874ADB005FB03E /* FixturesTableViewController.swift */; };
 		37AFC2ED20874AFB005FB03E /* FixturesTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37AFC2EC20874AFB005FB03E /* FixturesTableViewController.storyboard */; };
@@ -71,6 +74,9 @@
 		37A0D522208F1B2D00005B86 /* FixturesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesRepository.swift; sourceTree = "<group>"; };
 		37A0D5242091699C00005B86 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
 		37A0D5262091A40700005B86 /* NSObject + Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject + Base.swift"; sourceTree = "<group>"; };
+		37A0D5282091B9E200005B86 /* FixturesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesTableViewCell.swift; sourceTree = "<group>"; };
+		37A0D5292091B9E200005B86 /* FixturesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FixturesTableViewCell.xib; sourceTree = "<group>"; };
+		37A0D52E2091CF5000005B86 /* UIView + Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Base.swift"; sourceTree = "<group>"; };
 		37AFC2E62087107F005FB03E /* SwiftSVG.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSVG.framework; path = Carthage/Build/iOS/SwiftSVG.framework; sourceTree = "<group>"; };
 		37AFC2EA20874ADB005FB03E /* FixturesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesTableViewController.swift; sourceTree = "<group>"; };
 		37AFC2EC20874AFB005FB03E /* FixturesTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FixturesTableViewController.storyboard; sourceTree = "<group>"; };
@@ -190,6 +196,7 @@
 			children = (
 				37AFC2F120882897005FB03E /* UIViewController + Base.swift */,
 				37A0D5262091A40700005B86 /* NSObject + Base.swift */,
+				37A0D52E2091CF5000005B86 /* UIView + Base.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -265,6 +272,8 @@
 			children = (
 				37DAE470207F618F00DE5399 /* TeamRankTableViewCell.swift */,
 				37DAE471207F618F00DE5399 /* TeamRankTableViewCell.xib */,
+				37A0D5282091B9E200005B86 /* FixturesTableViewCell.swift */,
+				37A0D5292091B9E200005B86 /* FixturesTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -377,6 +386,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A0D52B2091B9E200005B86 /* FixturesTableViewCell.xib in Resources */,
 				37DAE473207F618F00DE5399 /* TeamRankTableViewCell.xib in Resources */,
 				3735601E208593FE000DB067 /* LeagueTableViewController.storyboard in Resources */,
 				377E8ED4208DB43A008FD662 /* NewsViewController.storyboard in Resources */,
@@ -433,8 +443,10 @@
 				3735601820849CFB000DB067 /* Links.swift in Sources */,
 				37A0D521208F00B100005B86 /* LeagueTableRepository.swift in Sources */,
 				37DAE43F207F5BAD00DE5399 /* LeagueTableViewController.swift in Sources */,
+				37A0D52A2091B9E200005B86 /* FixturesTableViewCell.swift in Sources */,
 				37AFC2EB20874ADB005FB03E /* FixturesTableViewController.swift in Sources */,
 				37A0D523208F1B2D00005B86 /* FixturesRepository.swift in Sources */,
+				37A0D52F2091CF5000005B86 /* UIView + Base.swift in Sources */,
 				37AFC2EF20874C6F005FB03E /* Fixtures.swift in Sources */,
 				37A0D5272091A40700005B86 /* NSObject + Base.swift in Sources */,
 				377E8ED2208DB407008FD662 /* NewsViewController.swift in Sources */,

@@ -15,6 +15,7 @@ class FixturesTableViewController: UIViewController {
 	
 	@IBOutlet private weak var crestView: UIView!
 	@IBOutlet private weak var crestImage: UIImageView!
+	@IBOutlet weak var tableView: UITableView!
 	
 	open var standing: Standing? {
 		didSet {
@@ -27,15 +28,26 @@ class FixturesTableViewController: UIViewController {
 		}
 	}
 	
-	private var fixturesEntity: FixturesEntity?
+	private var fixturesEntity: FixturesEntity? {
+		didSet{
+			setTableView()
+		}
+	}
 	private let fixturesTableView: UITableView = UITableView()
+	private let fixturesTableViewCell = FixturesTableViewCell()
+	
+	private func setTableView() {
+		tableView.delegate = self
+		tableView.dataSource = self
+		tableView.register(UINib(nibName: fixturesTableViewCell.identifier, bundle: nil),
+						   forCellReuseIdentifier: fixturesTableViewCell.identifier)
+		tableView.reloadData()
+	}
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
-		
 		let closure: ((FixturesEntity?) -> Void)? = {entity in
 			self.fixturesEntity = entity
-			print(entity ?? "nil")
 		}
 		
 		FixturesRepository().get(complation: closure)
@@ -46,4 +58,28 @@ class FixturesTableViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+}
+
+extension FixturesTableViewController: UITableViewDelegate {
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableView.deselectRow(at: indexPath, animated: true)
+	
+	}
+	
+}
+
+extension FixturesTableViewController: UITableViewDataSource {
+	
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return fixturesEntity!.count
+	}
+	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell = tableView.dequeueReusableCell(withIdentifier: fixturesTableViewCell.identifier,
+												 for: indexPath) as! FixturesTableViewCell
+		cell.entity = fixturesEntity?.fixtures[indexPath.row]
+		return  cell
+	}
+	
 }
