@@ -21,6 +21,7 @@ struct Fixture: Entity {
 		case SCHEDULED
 		case TIMED
 		case FINISHED
+		case POSTPONED
 	}
 	
 	let _links: Links?
@@ -29,7 +30,7 @@ struct Fixture: Entity {
 	let matchday: Int?
 	let homeTeamName: String?
 	let awayTeamName: String?
-	var odds: String?
+	var odds: [String: Double?]?
 	let result: FixtureResult?
 }
 
