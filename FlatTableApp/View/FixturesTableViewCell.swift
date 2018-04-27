@@ -11,7 +11,7 @@ import SwiftDate
 
 class FixturesTableViewCell: UITableViewCell {
 
-	open let identifier: String = "FixturesTableViewCell"
+	let identifier: String = "FixturesTableViewCell"
     
 	@IBOutlet weak var date: UILabel!
 	@IBOutlet weak var homeTeam: UILabel!
@@ -21,7 +21,8 @@ class FixturesTableViewCell: UITableViewCell {
 	
 	public var entity: Fixture? {
 		didSet {
-			self.date.text = entity?.date
+			let date: Date? = entity?.date?.forDate()
+			self.date.text = date?.string(custom: " yyyy.MM.dd HH:mm ")
 			self.homeTeam.text = entity?.homeTeamName
 			self.awayTeam.text = entity?.awayTeamName
 			self.result = entity?.result

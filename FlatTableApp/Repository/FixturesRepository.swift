@@ -11,6 +11,10 @@ import Alamofire
 
 struct FixturesRepository: BaseRepositoryProtocol {
 	
-	var url: String = "http://api.football-data.org/v1/teams/65/fixtures"
+	let url: String
+	
+	init(teamId: Int) {
+		self.url = "http://api.football-data.org/v1/teams/" + teamId.description + "/fixtures"
+	}
 	
 }

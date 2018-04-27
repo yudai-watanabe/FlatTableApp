@@ -24,13 +24,15 @@
 		37A0D5272091A40700005B86 /* NSObject + Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A0D5262091A40700005B86 /* NSObject + Base.swift */; };
 		37A0D52A2091B9E200005B86 /* FixturesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A0D5282091B9E200005B86 /* FixturesTableViewCell.swift */; };
 		37A0D52B2091B9E200005B86 /* FixturesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37A0D5292091B9E200005B86 /* FixturesTableViewCell.xib */; };
-		37A0D52F2091CF5000005B86 /* UIView + Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A0D52E2091CF5000005B86 /* UIView + Base.swift */; };
+		37A0D52F2091CF5000005B86 /* UIView + IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A0D52E2091CF5000005B86 /* UIView + IBInspectable.swift */; };
+		37A0D5312092CDAE00005B86 /* String + ForDate ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A0D5302092CDAE00005B86 /* String + ForDate ISO8601.swift */; };
 		37AFC2E72087107F005FB03E /* SwiftSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37AFC2E62087107F005FB03E /* SwiftSVG.framework */; };
 		37AFC2EB20874ADB005FB03E /* FixturesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AFC2EA20874ADB005FB03E /* FixturesTableViewController.swift */; };
 		37AFC2ED20874AFB005FB03E /* FixturesTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37AFC2EC20874AFB005FB03E /* FixturesTableViewController.storyboard */; };
 		37AFC2EF20874C6F005FB03E /* Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AFC2EE20874C6F005FB03E /* Fixtures.swift */; };
 		37AFC2F220882897005FB03E /* UIViewController + Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AFC2F120882897005FB03E /* UIViewController + Base.swift */; };
 		37AFC3302088609E005FB03E /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37AFC32F2088609E005FB03E /* Nuke.framework */; };
+		37D783A12093050500989DD5 /* UIView + ForImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D783A02093050500989DD5 /* UIView + ForImage.swift */; };
 		37DAE43D207F5BAD00DE5399 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DAE43C207F5BAD00DE5399 /* AppDelegate.swift */; };
 		37DAE43F207F5BAD00DE5399 /* LeagueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DAE43E207F5BAD00DE5399 /* LeagueTableViewController.swift */; };
 		37DAE444207F5BAD00DE5399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37DAE443207F5BAD00DE5399 /* Assets.xcassets */; };
@@ -76,13 +78,15 @@
 		37A0D5262091A40700005B86 /* NSObject + Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject + Base.swift"; sourceTree = "<group>"; };
 		37A0D5282091B9E200005B86 /* FixturesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesTableViewCell.swift; sourceTree = "<group>"; };
 		37A0D5292091B9E200005B86 /* FixturesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FixturesTableViewCell.xib; sourceTree = "<group>"; };
-		37A0D52E2091CF5000005B86 /* UIView + Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Base.swift"; sourceTree = "<group>"; };
+		37A0D52E2091CF5000005B86 /* UIView + IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + IBInspectable.swift"; sourceTree = "<group>"; };
+		37A0D5302092CDAE00005B86 /* String + ForDate ISO8601.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + ForDate ISO8601.swift"; sourceTree = "<group>"; };
 		37AFC2E62087107F005FB03E /* SwiftSVG.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSVG.framework; path = Carthage/Build/iOS/SwiftSVG.framework; sourceTree = "<group>"; };
 		37AFC2EA20874ADB005FB03E /* FixturesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesTableViewController.swift; sourceTree = "<group>"; };
 		37AFC2EC20874AFB005FB03E /* FixturesTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FixturesTableViewController.storyboard; sourceTree = "<group>"; };
 		37AFC2EE20874C6F005FB03E /* Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fixtures.swift; sourceTree = "<group>"; };
 		37AFC2F120882897005FB03E /* UIViewController + Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Base.swift"; sourceTree = "<group>"; };
 		37AFC32F2088609E005FB03E /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/iOS/Nuke.framework; sourceTree = "<group>"; };
+		37D783A02093050500989DD5 /* UIView + ForImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + ForImage.swift"; sourceTree = "<group>"; };
 		37DAE439207F5BAD00DE5399 /* FlatTableApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlatTableApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DAE43C207F5BAD00DE5399 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37DAE43E207F5BAD00DE5399 /* LeagueTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueTableViewController.swift; sourceTree = "<group>"; };
@@ -194,11 +198,21 @@
 		37AFC2F020882877005FB03E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				37D783A22093068300989DD5 /* UIView */,
 				37AFC2F120882897005FB03E /* UIViewController + Base.swift */,
 				37A0D5262091A40700005B86 /* NSObject + Base.swift */,
-				37A0D52E2091CF5000005B86 /* UIView + Base.swift */,
+				37A0D5302092CDAE00005B86 /* String + ForDate ISO8601.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		37D783A22093068300989DD5 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				37A0D52E2091CF5000005B86 /* UIView + IBInspectable.swift */,
+				37D783A02093050500989DD5 /* UIView + ForImage.swift */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 		37DAE430207F5BAD00DE5399 = {
@@ -446,14 +460,16 @@
 				37A0D52A2091B9E200005B86 /* FixturesTableViewCell.swift in Sources */,
 				37AFC2EB20874ADB005FB03E /* FixturesTableViewController.swift in Sources */,
 				37A0D523208F1B2D00005B86 /* FixturesRepository.swift in Sources */,
-				37A0D52F2091CF5000005B86 /* UIView + Base.swift in Sources */,
+				37A0D52F2091CF5000005B86 /* UIView + IBInspectable.swift in Sources */,
 				37AFC2EF20874C6F005FB03E /* Fixtures.swift in Sources */,
 				37A0D5272091A40700005B86 /* NSObject + Base.swift in Sources */,
 				377E8ED2208DB407008FD662 /* NewsViewController.swift in Sources */,
 				37DAE472207F618F00DE5399 /* TeamRankTableViewCell.swift in Sources */,
 				37A0D5252091699C00005B86 /* BaseRepository.swift in Sources */,
 				37AFC2F220882897005FB03E /* UIViewController + Base.swift in Sources */,
+				37D783A12093050500989DD5 /* UIView + ForImage.swift in Sources */,
 				37DAE43D207F5BAD00DE5399 /* AppDelegate.swift in Sources */,
+				37A0D5312092CDAE00005B86 /* String + ForDate ISO8601.swift in Sources */,
 				3735601620849C36000DB067 /* LeagueTable.swift in Sources */,
 				377E8ECE208DA369008FD662 /* TabBarController.swift in Sources */,
 				3735601A20849E28000DB067 /* Competitions.swift in Sources */,

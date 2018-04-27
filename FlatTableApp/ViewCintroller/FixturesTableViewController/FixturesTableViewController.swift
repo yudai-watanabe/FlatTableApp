@@ -10,6 +10,7 @@ import Alamofire
 import UIKit
 import Nuke
 import Chameleon
+import SwiftSVG
 
 class FixturesTableViewController: UIViewController {
 	
@@ -19,11 +20,25 @@ class FixturesTableViewController: UIViewController {
 	
 	open var standing: Standing? {
 		didSet {
-			let url = URL(string: (standing?.crestURI)!)
-			Nuke.Manager.shared.loadImage(with: url!, completion: {[weak self] image in
-				self?.crestImage.image = image.value
-				self?.crestView.backgroundColor = UIColor(averageColorFrom: image.value)
-				print("完了")
+			let url: URL? = URL(string: (standing?.crestURI)!)
+			let teamUrl: URL = URL(string: (standing?._links.team?.href)!)!
+			let teamId: Int = Int(teamUrl.pathComponents.last!)!
+			let closure: ((FixturesEntity?) -> Void)? = {entity in
+				self.fixturesEntity = entity
+			}
+			FixturesRepository(teamId: teamId).get(complation: closure)
+			
+			Nuke.Manager.shared.loadImage(with: url!, completion: {[weak self] result in
+				switch result {
+				case .success(let image):
+					self?.crestImage.image = image
+					self?.crestView.backgroundColor = UIColor(averageColorFrom: image)
+				case .failure(let e):
+					print(e)
+//					let view = UIView(SVGURL: url!, parser: nil, completion: nil)
+//					self?.crestImage.image = view.forImage()
+//					self?.crestView.backgroundColor = UIColor(averageColorFrom: view.forImage())
+				}
 			})
 		}
 	}
@@ -46,11 +61,7 @@ class FixturesTableViewController: UIViewController {
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
-		let closure: ((FixturesEntity?) -> Void)? = {entity in
-			self.fixturesEntity = entity
-		}
 		
-		FixturesRepository().get(complation: closure)
     }
 
     override func didReceiveMemoryWarning() {

@@ -32,11 +32,7 @@ class LeagueTableViewController: UIViewController  {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		self.view.makeToastActivity(.center)
-		 repository.getLeagueTable(complation: { entity in
-			self.view.hideToastActivity()
-			self.leagueTable = entity
-		})
+		self.getLeagueTable()
 	}
 	
 	override func didReceiveMemoryWarning() {
@@ -66,12 +62,17 @@ class LeagueTableViewController: UIViewController  {
 		self.navigationItem.setLeftBarButton(self.reloadBarButttonItem, animated: animated)
 	}
 	
-	@objc func refresh(_ sender: UIRefreshControl) {
-		repository.getLeagueTable(complation:{ entity in
+	@objc func refresh(_ sender: UIButton) {
+		self.getLeagueTable()
+	}
+	
+	private func getLeagueTable() {
+		self.view.makeToastActivity(.center)
+		repository.getLeagueTable(complation: { entity in
+			self.view.hideToastActivity()
 			self.leagueTable = entity
 		})
 	}
-	
 	
 }
 
